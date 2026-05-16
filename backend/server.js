@@ -73,6 +73,11 @@ app.post('/api/orders', (req, res) => {
 });
 
 // Start the server
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../frontend')));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
 app.listen(PORT, () => {
     console.log(`Server is running locally on http://localhost:${PORT}`);
 });
