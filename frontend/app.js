@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     const fetchProducts = async () => {
         try {
-            const response = await fetch(API_URL);
+            const response = await fetch('/api/products');S
             
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkoutBtn.disabled = true;
 
         try {
-            const response = await fetch(ORDERS_URL, {
+            const response = await fetch('/api/orders', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
