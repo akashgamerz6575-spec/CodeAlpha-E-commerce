@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone | Premium Store</title>
+    <meta name="description" content="Discover premium tech gadgets and electronics at TechZone.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">TechZone</a>
+            <div class="cart-container">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-text">Cart (<span id="cart-counter">0</span>)</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <h1 class="hero-title">Elevate Your Lifestyle</h1>
+            <p class="hero-subtitle">Discover our curated collection of premium gadgets and tech accessories.</p>
+        </section>
+
+        <!-- Product Grid where dynamic cards will be injected -->
+        <section id="product-grid" class="product-grid">
+            <div class="loading-state">
+                <div class="spinner"></div>
+                <p>Loading premium products...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 TechZone. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal Overlay -->
+    <div id="cart-modal-overlay" class="cart-modal-overlay"></div>
+
+    <!-- Cart Modal Panel -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="close-cart-btn" class="close-cart-btn">&times;</button>
+        </div>
+        <div id="cart-items-container" class="cart-items-container">
+            <!-- Cart items will be dynamically injected here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
