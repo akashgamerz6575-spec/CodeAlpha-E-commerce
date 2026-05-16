@@ -82,6 +82,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '..', 'frontend', 'index.html'));
 });
 
-// Keep this as your final lineapp.listen(PORT, () => {
+// Keep this as your final line
+app.listen(PORT, () => {
     console.log(`Server is running locally on http://localhost:${PORT}`);
 });
