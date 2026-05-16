@@ -78,7 +78,7 @@ const path = require('path');
 // This securely points Render to the frontend folder one level up
 app.use(express.static(path.resolve(__dirname, '..', 'frontend')));
 
-app.get('*', (req, res) => {
+app.get(/.*/, (req, res) => {
     res.sendFile(path.resolve(__dirname, '..', 'frontend', 'index.html'));
 });
 
