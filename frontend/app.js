@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     const fetchProducts = async () => {
         try {
-            const response = await fetch('/api/products');S
+            const response = await fetch('/api/products');
             
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
