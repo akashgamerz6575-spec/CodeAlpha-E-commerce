@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let cart = JSON.parse(localStorage.getItem('techzone_cart')) || [];
     
     // API endpoints
-    const API_URL = 'http://localhost:3000/api/products';
+    const API_URL = window.location.origin.includes('localhost') 
+    ? 'http://localhost:3000' 
+    : window.location.origin;
     const ORDERS_URL = 'http://localhost:3000/api/orders';
 
     /**
